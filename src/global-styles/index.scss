@@ -18,7 +18,7 @@ body {
   font-family: "Lato", sans-serif;
 
   /* overflow-y: hidden; */
-  height: 100vh;
+  //   height: 100vh;
   background-color: var(--primary-color);
   color: var(--secondary-color-lighter);
   position: relative;
@@ -29,6 +29,7 @@ body {
   font-weight: 900;
   letter-spacing: -0.5px;
   transition: 0.2s all;
+  cursor: pointer;
 
   &:hover {
     color: var(--third-color);

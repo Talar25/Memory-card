@@ -1,10 +1,8 @@
 .win-statement {
-  background-color: var(--primary-color-dark);
+  margin: 20rem auto;
   max-width: 30rem;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
   padding: 3rem;
   font-size: var(--big-font);
   border-radius: 12px;
@@ -29,6 +27,46 @@
     &:active {
       transform: translateY(1px);
       box-shadow: 3px 6px 10px 15px rgba(0, 0, 0, 0.312);
+    }
+  }
+}
+
+.start {
+  margin: 20rem auto;
+  padding: 6rem 8rem;
+  text-align: center;
+
+  & .heading-primary {
+    color: var(--third-color);
+
+    filter: drop-shadow(0 0 16px var(--third-color));
+    margin-bottom: 3.5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__btn {
+    padding: 0.5rem 2rem;
+    font-size: var(--medium-font);
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: translateY(-2px);
+      color: var(--third-color-dark);
+      filter: drop-shadow(0 0 16px var(--third-color));
+    }
+    &:active {
+      transform: translateY(1px);
+      filter: drop-shadow(0 0 16px var(--third-color));
     }
   }
 }

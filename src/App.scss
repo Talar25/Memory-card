@@ -1,0 +1,34 @@
+.win-statement {
+  background-color: var(--primary-color-dark);
+  max-width: 30rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  font-size: var(--big-font);
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--third-color);
+  box-shadow: 3px 3px 20px 15px rgba(0, 0, 0, 0.312);
+  &__btn {
+    margin-top: 2rem;
+    padding: 0.55rem 3rem;
+    border-radius: 12px;
+    background-color: var(--third-color);
+    border: 1px solid var(--third-color-dark);
+    color: var(--secondary-color-light);
+    font-weight: 900;
+    box-shadow: 3px 6px 10px 15px rgba(0, 0, 0, 0.212);
+    transition: 0.2s all;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 3px 6px 10px 15px rgba(0, 0, 0, 0.112);
+    }
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 3px 6px 10px 15px rgba(0, 0, 0, 0.312);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.main {
+  max-width: 150rem;
+  margin: 10rem auto;
+  padding-bottom: 5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  &__loader {
+    font-size: var(--regular-font);
+  }
+
+  &__card {
+    // width: 120px;
+    // height: 20rem;
+    padding: 1rem;
+    background-color: var(--primary-color-lighter);
+    transition: transform 0.6s;
+    cursor: pointer;
+    border-radius: 12px;
+
+    &-name {
+      margin-top: 2rem;
+      text-align: center;
+      background-color: var(--primary-color);
+      padding: 1rem;
+      font-size: var(--small-font);
+      font-weight: 900;
+      border-radius: 12px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.326);
+    }
+
+    & img {
+      height: 16rem;
+      width: 16rem;
+      display: block;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  }
+}

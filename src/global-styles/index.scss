@@ -1,0 +1,38 @@
+@use "./root.scss";
+@use "./normalize.scss";
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+
+  /* overflow-y: hidden; */
+  height: 100vh;
+  background-color: var(--primary-color);
+  color: var(--secondary-color-lighter);
+  position: relative;
+}
+
+.heading-primary {
+  font-size: var(--large-font);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  transition: 0.2s all;
+
+  &:hover {
+    color: var(--third-color);
+
+    filter: drop-shadow(0 0 16px var(--third-color));
+  }
+}

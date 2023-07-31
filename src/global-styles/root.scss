@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&display=swap");
+
+:root {
+  /* primary color */
+  --primary-color-darker: #0b0d10;
+  --primary-color-dark: #13151a;
+  --primary-color: #1a1d24;
+  --primary-color-light: #21262f;
+  --primary-color-lighter: #252a34;
+
+  /* secondary colors */
+  --secondary-color-darker: #757575;
+  --secondary-color-dark: #a4a4a4;
+  --secondary-color: #d3d3d3;
+  --secondary-color-light: #eaeaea;
+  --secondary-color-lighter: #eeeeee;
+
+  --secondary-color-background: rgba(235, 243, 248, 0.708);
+
+  --third-color-dark: #00adb5;
+  --third-color: #33bdc4;
+  --third-color-light: #80d6da;
+
+  --white-like-color: #eeeeee;
+  --black-like-color: #222831;
+
+  --black-color: #000;
+  --white-color: #fff;
+  --red-color-light: #e84646;
+  --red-color: #e21818;
+  --red-color-dark: #9e1111;
+  --green-color-dark: #427451;
+  --green-color: #539165;
+  --green-color-light: #75a784;
+
+  /* fonts */
+  --small-font: 1rem;
+  --regular-font: 1.4rem;
+  --medium-font: 1.9rem;
+  --big-font: 2.8rem;
+  --large-font: 3.9rem;
+  --very-large-font: 5.65rem;
+}

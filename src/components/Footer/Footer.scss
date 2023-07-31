@@ -1,0 +1,24 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--third-color);
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  filter: drop-shadow(0 0 16px var(--third-color));
+
+  & a {
+    text-decoration: none;
+    color: var(--secondary-color-lighter);
+    font-size: var(--regular-font);
+    font-weight: 700;
+    transition: 0.2s all;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

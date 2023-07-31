@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.scss";
+import { MainPage } from "./components/Main-page/Main-page";
+import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { useState } from "react";
+import { Win } from "./components/Win";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
+  const [win, setWin] = useState(false);
+
+  function addScore() {
+    setCurrentScore((x) => x + 1);
+    if (bestScore <= currentScore) {
+      setBestScore((bestScore) => bestScore + 1);
+    }
+
+    if (bestScore === 10) setWin(true);
+  }
+
+  function restartScore() {
+    setCurrentScore(0);
+  }
+
+  function gameRestart() {
+    setCurrentScore(0);
+    setBestScore(0);
+    setWin(false);
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <Header currentScore={currentScore} bestScore={bestScore} />
+      {win ? (
+        <Win gameRestart={gameRestart} />
+      ) : (
+        <MainPage addScore={addScore} restartScore={restartScore} />
+      )}
 
-export default App
+      <Footer />
+    </>
+  );
+}

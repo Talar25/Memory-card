@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import "./Main-page.scss";
+import { Card } from "./Card";
+import { Loader } from "./Loader";
 
 export function MainPage({ addScore, restartScore, checkWin, characters }) {
   const [cards, setCards] = useState(characters);
@@ -54,26 +56,4 @@ export function MainPage({ addScore, restartScore, checkWin, characters }) {
       )}
     </main>
   );
-}
-
-// eslint-disable-next-line react/prop-types
-function Card({ children, url, handleClick, id }) {
-  const [didLoad, setLoad] = useState(false);
-  // const url = data.forms.url;
-  function handleLoading() {
-    setLoad(true);
-  }
-
-  const style = didLoad ? {} : { visibility: "hidden" };
-
-  return (
-    <div style={style} className="main__card" onClick={() => handleClick(id)}>
-      <img src={url} onLoad={handleLoading} />
-      <p className="main__card-name">{children}</p>
-    </div>
-  );
-}
-
-function Loader() {
-  return <p className="main__loader">Loading...</p>;
 }
